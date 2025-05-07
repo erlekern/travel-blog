@@ -164,21 +164,30 @@ html, body {
 }
 
 
-/* Responsive layout for smaller screens */
 @media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden; /* Prevent horizontal overflow */
+  }
+
   .page {
     height: auto;
     min-height: 100vh;
+    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto;    text-align: center;
+    grid-template-rows: auto;
+    text-align: center;
     padding: 20px 20px 80px 20px;
     gap: 30px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   .travel-stats,
   .country-stats,
   .page-description {
-    grid-column:  1 / -1;
+    grid-column: 1 / -1;
     grid-row: auto;
     place-self: center;
     text-align: center;
